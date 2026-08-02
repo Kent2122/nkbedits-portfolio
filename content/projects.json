@@ -12,7 +12,7 @@
       "thumb": "thumb-1",
       "orientation": "portrait",
       "desc": "The Lucky Learner Campaign Promo Video For Saya App",
-      "embedUrl": "\"D:\\Naing - Claude Personal\\nkbedits-portfolio\\assets\\Reels\\1-the-lucky-learner-campaign.mp4\""
+      "embedUrl": ""
     },
     {
       "title": "2-ai-course-promo-2-saya-reel",
@@ -21,7 +21,7 @@
       "thumb": "thumb-2",
       "orientation": "portrait",
       "desc": "AI course Introduction For Saya App",
-      "embedUrl": "\"D:\\Naing - Claude Personal\\nkbedits-portfolio\\assets\\Reels\\2-ai-course-promo-2-saya-reel.mp4\""
+      "embedUrl": "assets/Reels/2-ai-course-promo-2-saya-reel.mp4"
     },
     {
       "title": "3-campaign-reminder-saya-reel",
@@ -30,7 +30,7 @@
       "thumb": "thumb-3",
       "orientation": "portrait",
       "desc": "Campaigner Reminder Video",
-      "embedUrl": "\"D:\\Naing - Claude Personal\\nkbedits-portfolio\\assets\\Reels\\3-campaign-reminder-saya-reel.mp4\""
+      "embedUrl": "assets/Reels/3-campaign-reminder-saya-reel.mp4"
     },
     {
       "title": "4-learn-plus-saya-reel",
@@ -39,7 +39,7 @@
       "thumb": "thumb-4",
       "orientation": "portrait",
       "desc": "Learn Plus Short Promotion",
-      "embedUrl": "\"D:\\Naing - Claude Personal\\nkbedits-portfolio\\assets\\Reels\\4-learn-plus-saya-reel.mp4\""
+      "embedUrl": "assets/Reels/4-learn-plus-saya-reel.mp4"
     },
     {
       "title": "5-new-year-promotion-thingyan",
@@ -48,7 +48,7 @@
       "thumb": "thumb-5",
       "orientation": "portrait",
       "desc": "Promotion Ads for Saya App",
-      "embedUrl": "\"D:\\Naing - Claude Personal\\nkbedits-portfolio\\assets\\Reels\\5-new-year-promotion-thingyan.mp4\""
+      "embedUrl": "assets/Reels/5-new-year-promotion-thingyan.mp4"
     },
     {
       "title": "6-refund-promotion-saya-reel",
@@ -56,7 +56,7 @@
       "categoryLabel": "Reels",
       "thumb": "thumb-6",
       "orientation": "portrait",
-      "desc": "\"D:\\Naing - Claude Personal\\nkbedits-portfolio\\assets\\Reels\\6-refund-promotion-saya-reel.mp4\"",
+      "desc": "",
       "embedUrl": ""
     },
     {
@@ -65,8 +65,8 @@
       "categoryLabel": "Reels",
       "thumb": "thumb-1",
       "orientation": "portrait",
-      "desc": "\"D:\\Naing - Claude Personal\\nkbedits-portfolio\\assets\\Reels\\7-saya-promotion-reel-1.mp4\"",
-      "embedUrl": ""
+      "desc": "",
+      "embedUrl": "assets/Reels/7-saya-promotion-reel-1.mp4"
     },
     {
       "title": "8-15000-mmk-promotion-saya-reel",
@@ -74,8 +74,8 @@
       "categoryLabel": "Reels",
       "thumb": "thumb-2",
       "orientation": "portrait",
-      "desc": "\"D:\\Naing - Claude Personal\\nkbedits-portfolio\\assets\\Reels\\8-15000-mmk-promotion-saya-reel.mp4\"",
-      "embedUrl": ""
+      "desc": "",
+      "embedUrl": "assets/Reels/8-15000-mmk-promotion-saya-reel.mp4"
     },
     {
       "title": "9-ai-course-promo-saya-reel",
@@ -83,8 +83,8 @@
       "categoryLabel": "Reels",
       "thumb": "thumb-3",
       "orientation": "portrait",
-      "desc": "\"D:\\Naing - Claude Personal\\nkbedits-portfolio\\assets\\Reels\\9-ai-course-promo-saya-reel.mp4\"",
-      "embedUrl": ""
+      "desc": "",
+      "embedUrl": "assets/Reels/9-ai-course-promo-saya-reel.mp4"
     },
     {
       "title": "Aurora Skincare — Launch Ad",
