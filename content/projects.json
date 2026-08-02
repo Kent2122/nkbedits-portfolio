@@ -6,12 +6,84 @@
   },
   "projects": [
     {
-      "title": "Neon Nights Reel",
+      "title": "Reel 01",
       "category": "reels",
       "categoryLabel": "Reels",
       "thumb": "thumb-1",
       "orientation": "portrait",
-      "desc": "Fast-cut vertical reel edited for retention — beat-synced transitions and punch-in zooms.",
+      "desc": "",
+      "embedUrl": ""
+    },
+    {
+      "title": "Reel 02",
+      "category": "reels",
+      "categoryLabel": "Reels",
+      "thumb": "thumb-2",
+      "orientation": "portrait",
+      "desc": "",
+      "embedUrl": ""
+    },
+    {
+      "title": "Reel 03",
+      "category": "reels",
+      "categoryLabel": "Reels",
+      "thumb": "thumb-3",
+      "orientation": "portrait",
+      "desc": "",
+      "embedUrl": ""
+    },
+    {
+      "title": "Reel 04",
+      "category": "reels",
+      "categoryLabel": "Reels",
+      "thumb": "thumb-4",
+      "orientation": "portrait",
+      "desc": "",
+      "embedUrl": ""
+    },
+    {
+      "title": "Reel 05",
+      "category": "reels",
+      "categoryLabel": "Reels",
+      "thumb": "thumb-5",
+      "orientation": "portrait",
+      "desc": "",
+      "embedUrl": ""
+    },
+    {
+      "title": "Reel 06",
+      "category": "reels",
+      "categoryLabel": "Reels",
+      "thumb": "thumb-6",
+      "orientation": "portrait",
+      "desc": "",
+      "embedUrl": ""
+    },
+    {
+      "title": "Reel 07",
+      "category": "reels",
+      "categoryLabel": "Reels",
+      "thumb": "thumb-1",
+      "orientation": "portrait",
+      "desc": "",
+      "embedUrl": ""
+    },
+    {
+      "title": "Reel 08",
+      "category": "reels",
+      "categoryLabel": "Reels",
+      "thumb": "thumb-2",
+      "orientation": "portrait",
+      "desc": "",
+      "embedUrl": ""
+    },
+    {
+      "title": "Reel 09",
+      "category": "reels",
+      "categoryLabel": "Reels",
+      "thumb": "thumb-3",
+      "orientation": "portrait",
+      "desc": "",
       "embedUrl": ""
     },
     {
@@ -39,15 +111,6 @@
       "thumb": "thumb-4",
       "orientation": "landscape",
       "desc": "Before/after color grading showcase — warm cinematic LUT built from scratch.",
-      "embedUrl": ""
-    },
-    {
-      "title": "Street Style Recap",
-      "category": "reels",
-      "categoryLabel": "Reels",
-      "thumb": "thumb-5",
-      "orientation": "portrait",
-      "desc": "Multi-clip recap reel with dynamic text overlays and match cuts.",
       "embedUrl": ""
     },
     {
