@@ -365,17 +365,21 @@ section { position: relative; padding: 120px 6vw; }
 .project-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  align-items: start;
   gap: 1.5rem;
 }
 .project-card {
   position: relative;
-  aspect-ratio: 4/5;
+  aspect-ratio: 4/5; /* portrait/vertical videos — shorts-style, full-bleed */
   border-radius: var(--radius);
   overflow: hidden;
   cursor: pointer;
   background: var(--bg-alt);
   border: 1px solid var(--border);
   transition: transform 0.4s ease, border-color 0.3s ease;
+}
+.project-card[data-orientation="landscape"] {
+  aspect-ratio: 16/9; /* horizontal videos — YouTube-style, full-bleed */
 }
 .project-card:hover { transform: translateY(-6px); border-color: rgba(255,255,255,0.2); }
 .project-card.hidden { display: none; }

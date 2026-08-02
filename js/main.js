@@ -12,7 +12,7 @@ const grid = document.getElementById('projectGrid');
 
 function renderProjects() {
   grid.innerHTML = PROJECTS.map((p, i) => `
-    <div class="project-card" data-category="${p.category}" data-index="${i}">
+    <div class="project-card" data-category="${p.category}" data-index="${i}" data-orientation="${p.orientation || 'portrait'}">
       <div class="project-thumb ${p.thumb}">
         <div class="project-preview"></div>
       </div>

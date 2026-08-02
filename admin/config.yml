@@ -42,6 +42,13 @@ collections:
                   - { label: "Motion Graphics", value: "motion" }
                   - { label: "Color Grading", value: "color" }
               - { label: "Category Label (shown on the card)", name: "categoryLabel", widget: "string" }
+              - label: "Video Orientation"
+                name: "orientation"
+                widget: "select"
+                default: "portrait"
+                options:
+                  - { label: "Vertical / Shorts (tall card, full-bleed)", value: "portrait" }
+                  - { label: "Horizontal / YouTube-style (wide card, full-bleed)", value: "landscape" }
               - label: "Thumbnail Style"
                 name: "thumb"
                 widget: "select"

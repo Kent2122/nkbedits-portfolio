@@ -10,6 +10,7 @@
       "category": "reels",
       "categoryLabel": "Reels",
       "thumb": "thumb-1",
+      "orientation": "portrait",
       "desc": "Fast-cut vertical reel edited for retention — beat-synced transitions and punch-in zooms.",
       "embedUrl": ""
     },
@@ -18,6 +19,7 @@
       "category": "commercial",
       "categoryLabel": "Commercial",
       "thumb": "thumb-2",
+      "orientation": "landscape",
       "desc": "30s product launch commercial. Clean pacing, brand-safe color, on-screen captions.",
       "embedUrl": ""
     },
@@ -26,6 +28,7 @@
       "category": "motion",
       "categoryLabel": "Motion Graphics",
       "thumb": "thumb-3",
+      "orientation": "landscape",
       "desc": "Animated logo reveal and kinetic typography built as a brand's intro sequence — clean, on-beat motion design.",
       "embedUrl": ""
     },
@@ -34,6 +37,7 @@
       "category": "color",
       "categoryLabel": "Color Grading",
       "thumb": "thumb-4",
+      "orientation": "landscape",
       "desc": "Before/after color grading showcase — warm cinematic LUT built from scratch.",
       "embedUrl": ""
     },
@@ -42,6 +46,7 @@
       "category": "reels",
       "categoryLabel": "Reels",
       "thumb": "thumb-5",
+      "orientation": "portrait",
       "desc": "Multi-clip recap reel with dynamic text overlays and match cuts.",
       "embedUrl": ""
     },
@@ -50,6 +55,7 @@
       "category": "commercial",
       "categoryLabel": "Commercial",
       "thumb": "thumb-6",
+      "orientation": "portrait",
       "desc": "High-energy brand spot for a fitness app launch, cut for social + broadcast.",
       "embedUrl": ""
     }
