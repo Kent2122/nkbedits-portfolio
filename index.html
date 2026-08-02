@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kent Edits — Video Editor Portfolio</title>
+<meta name="description" content="NKB Edits — video editing portfolio. Reels, commercials, color grading and storytelling through the cut.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="noise-overlay"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+
+<!-- NAV -->
+<header class="nav">
+  <a href="#home" class="logo">Kent<span>edits</span></a>
+  <nav class="nav-links">
+    <a href="#work">Work</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-photo">
+    <img src="assets/BG - Cover.png" alt="">
+  </div>
+  <div class="hero-content">
+    <p class="eyebrow">Motion Designer &amp; Video Editor</p>
+    <h1 class="hero-title">
+      <span class="line">CUTTING</span>
+      <span class="line accent">STORIES</span>
+      <span class="line">THAT MOVE.</span>
+    </h1>
+    <p class="hero-sub">I'm Kent — I create motion graphics, edit reels, commercials and narrative pieces that hook in the first second and hold to the last frame.</p>
+    <div class="hero-cta">
+      <a href="#work" class="btn btn-primary">View Work</a>
+      <a href="#contact" class="btn btn-ghost">Let's Talk</a>
+    </div>
+  </div>
+
+  <div class="hero-visual" id="heroVisual">
+    <div class="player">
+      <div class="halo" aria-hidden="true"></div>
+      <div class="rings" aria-hidden="true">
+        <span class="ring ring--1"></span>
+        <span class="ring ring--2"></span>
+        <span class="ring ring--3"></span>
+        <span class="ring ring--4"></span>
+      </div>
+      <button class="play" id="reelPlayBtn" type="button" aria-label="Watch showreel">
+        <span class="play__icon" aria-hidden="true"></span>
+      </button>
+    </div>
+    <p class="reel-caption">Watch Showreel</p>
+  </div>
+
+  <div class="scroll-hint">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span>REELS</span><span>•</span><span>COLOR GRADING</span><span>•</span><span>SOUND DESIGN</span><span>•</span><span>MOTION GRAPHICS</span><span>•</span><span>STORYTELLING</span><span>•</span>
+    <span>REELS</span><span>•</span><span>COLOR GRADING</span><span>•</span><span>SOUND DESIGN</span><span>•</span><span>MOTION GRAPHICS</span><span>•</span><span>STORYTELLING</span><span>•</span>
+  </div>
+</div>
+
+<!-- WORK -->
+<section class="work" id="work">
+  <div class="section-head">
+    <p class="eyebrow">Selected Work</p>
+    <h2>The Portfolio</h2>
+    <p class="section-sub">Click any project to watch. Filter by category to jump straight to what you're after.</p>
+  </div>
+
+  <div class="filters" id="filters">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="reels">Reels</button>
+    <button class="filter-btn" data-filter="commercial">Commercial</button>
+    <button class="filter-btn" data-filter="motion">Motion Graphics</button>
+    <button class="filter-btn" data-filter="color">Color Grading</button>
+  </div>
+
+  <div class="project-grid" id="projectGrid"></div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-grid">
+    <div class="about-visual">
+      <div class="about-frame">
+        <img src="assets/profile.png" alt="Kent">
+      </div>
+    </div>
+    <div class="about-copy">
+      <p class="eyebrow">About</p>
+      <h2>I edit like the audience is one swipe away from leaving.</h2>
+      <p>Every cut, transition and beat is placed on purpose. My workflow blends fast-paced social editing with cinematic color and sound design — built to hook attention and hold it through to the CTA.</p>
+      <div class="stats">
+        <div class="stat"><span class="stat-num">150+</span><span class="stat-label">Projects Delivered</span></div>
+        <div class="stat"><span class="stat-num">4+</span><span class="stat-label">Years Editing</span></div>
+        <div class="stat"><span class="stat-num">30M+</span><span class="stat-label">Views Generated</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="section-head">
+    <p class="eyebrow">What I Do</p>
+    <h2>Services</h2>
+  </div>
+  <div class="services-grid">
+    <div class="service-card">
+      <span class="service-num">01</span>
+      <h3>Short-Form Reels</h3>
+      <p>Punchy, algorithm-aware edits for TikTok, Reels &amp; Shorts — built to hook in the first 2 seconds.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-num">02</span>
+      <h3>Commercial &amp; Brand</h3>
+      <p>Polished, on-brand edits for ads, product launches and brand campaigns.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-num">03</span>
+      <h3>Motion Graphics</h3>
+      <p>Animated titles, kinetic type and clean motion design that adds polish without slowing the story down.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-num">04</span>
+      <h3>Sound Design</h3>
+      <p>Mix, SFX and pacing that make cuts land and moments hit harder.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <p class="eyebrow">Get In Touch</p>
+  <h2>Got a project in mind?</h2>
+  <a href="mailto:naingkhantbo2122@gmail.com" class="contact-email">naingkhantbo2122@gmail.com</a>
+  <div class="socials">
+    <a href="#" target="_blank" rel="noopener">Instagram</a>
+    <a href="#" target="_blank" rel="noopener">YouTube</a>
+    <a href="#" target="_blank" rel="noopener">Twitter / X</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>&copy; <span id="year"></span> NKB Edits. All rights reserved.</p>
+</footer>
+
+<!-- VIDEO MODAL -->
+<div class="modal" id="videoModal">
+  <div class="modal-backdrop" id="modalBackdrop"></div>
+  <div class="modal-content">
+    <button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
+    <div class="modal-video" id="modalVideo"></div>
+    <div class="modal-info">
+      <h3 id="modalTitle"></h3>
+      <p id="modalDesc"></p>
+    </div>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

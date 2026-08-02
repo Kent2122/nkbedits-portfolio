@@ -1,0 +1,57 @@
+{
+  "showreel": {
+    "title": "Full Showreel",
+    "desc": "A mix of reels, commercials, music videos and color work — my editing style in one cut.",
+    "embedUrl": ""
+  },
+  "projects": [
+    {
+      "title": "Neon Nights Reel",
+      "category": "reels",
+      "categoryLabel": "Reels",
+      "thumb": "thumb-1",
+      "desc": "Fast-cut vertical reel edited for retention — beat-synced transitions and punch-in zooms.",
+      "embedUrl": ""
+    },
+    {
+      "title": "Aurora Skincare — Launch Ad",
+      "category": "commercial",
+      "categoryLabel": "Commercial",
+      "thumb": "thumb-2",
+      "desc": "30s product launch commercial. Clean pacing, brand-safe color, on-screen captions.",
+      "embedUrl": ""
+    },
+    {
+      "title": "Motion Reveal — Brand Intro",
+      "category": "motion",
+      "categoryLabel": "Motion Graphics",
+      "thumb": "thumb-3",
+      "desc": "Animated logo reveal and kinetic typography built as a brand's intro sequence — clean, on-beat motion design.",
+      "embedUrl": ""
+    },
+    {
+      "title": "Golden Hour Grade",
+      "category": "color",
+      "categoryLabel": "Color Grading",
+      "thumb": "thumb-4",
+      "desc": "Before/after color grading showcase — warm cinematic LUT built from scratch.",
+      "embedUrl": ""
+    },
+    {
+      "title": "Street Style Recap",
+      "category": "reels",
+      "categoryLabel": "Reels",
+      "thumb": "thumb-5",
+      "desc": "Multi-clip recap reel with dynamic text overlays and match cuts.",
+      "embedUrl": ""
+    },
+    {
+      "title": "Fitness App — Brand Spot",
+      "category": "commercial",
+      "categoryLabel": "Commercial",
+      "thumb": "thumb-6",
+      "desc": "High-energy brand spot for a fitness app launch, cut for social + broadcast.",
+      "embedUrl": ""
+    }
+  ]
+}
