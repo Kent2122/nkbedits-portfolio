@@ -5,35 +5,62 @@
 let PROJECTS = [];
 let SHOWREEL = { title: "", desc: "", embedUrl: "" };
 
+const CATEGORY_ORDER = ["shorts-reels", "commercials", "motion-graphics", "graphic-designs", "logos", "mascots"];
+let currentFilter = "all";
+
 // ============================================================
 // Render project grid
 // ============================================================
 const grid = document.getElementById('projectGrid');
 
-function renderProjects() {
-  grid.innerHTML = PROJECTS.map((p, i) => `
+function getVisibleEntries(filter) {
+  const all = PROJECTS.map((p, i) => ({ p, i }));
+
+  if (filter === 'all') {
+    // curated preview: only the first 3 per category, not everything
+    let visible = [];
+    CATEGORY_ORDER.forEach(cat => {
+      visible = visible.concat(all.filter(o => o.p.category === cat).slice(0, 3));
+    });
+    return visible;
+  }
+
+  return all.filter(o => o.p.category === filter);
+}
+
+function cardHtml({ p, i }) {
+  const playBtn = p.mediaType === 'video' ? '<div class="play-btn"></div>' : '';
+  return `
     <div class="project-card" data-category="${p.category}" data-index="${i}" data-orientation="${p.orientation || 'portrait'}">
       <div class="project-thumb ${p.thumb}">
         <div class="project-preview"></div>
       </div>
       <span class="project-tag">${p.categoryLabel}</span>
-      <div class="play-btn"></div>
+      ${playBtn}
       <div class="project-overlay">
         <div class="project-title">${p.title}</div>
         <div class="project-meta">${p.categoryLabel}</div>
       </div>
     </div>
-  `).join('');
+  `;
+}
+
+function renderProjects(filter) {
+  currentFilter = filter || currentFilter;
+  const entries = getVisibleEntries(currentFilter);
+  grid.innerHTML = entries.map(cardHtml).join('');
 
   const canHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
 
   document.querySelectorAll('.project-card').forEach(card => {
     const index = parseInt(card.dataset.index, 10);
-    card.addEventListener('click', () => openModal(index));
+    card.addEventListener('click', () => openMedia(index));
 
     if (!canHover) return;
+    const p = PROJECTS[index];
+    if (p.mediaType !== 'video') return;
 
-    const previewHtml = getHoverPreviewHtml(PROJECTS[index].embedUrl);
+    const previewHtml = getHoverPreviewHtml(p.embedUrl);
     if (!previewHtml) return;
 
     const previewEl = card.querySelector('.project-preview');
@@ -56,8 +83,8 @@ function isRemoteEmbed(url) {
   return url.includes('youtube.com') || url.includes('vimeo.com');
 }
 
-// Full-size player used in the click-to-watch modal.
-function getModalVideoHtml(p) {
+// Full-size player used in the theater overlay.
+function getTheaterVideoHtml(p) {
   if (!p.embedUrl) return null;
 
   if (isRemoteEmbed(p.embedUrl)) {
@@ -95,56 +122,150 @@ filterBtns.forEach(btn => {
   btn.addEventListener('click', () => {
     filterBtns.forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
-    const filter = btn.dataset.filter;
-    document.querySelectorAll('.project-card').forEach(card => {
-      const match = filter === 'all' || card.dataset.category === filter;
-      card.classList.toggle('hidden', !match);
-    });
+    renderProjects(btn.dataset.filter);
   });
 });
 
 // ============================================================
-// Modal
+// Theater / Lightbox overlay
 // ============================================================
-const modal = document.getElementById('videoModal');
-const modalContent = document.querySelector('.modal-content');
-const modalVideo = document.getElementById('modalVideo');
-const modalTitle = document.getElementById('modalTitle');
-const modalDesc = document.getElementById('modalDesc');
-const modalClose = document.getElementById('modalClose');
-const modalBackdrop = document.getElementById('modalBackdrop');
+const theaterOverlay = document.getElementById('theaterOverlay');
+const theaterPanel = document.getElementById('theaterPanel');
+const theaterStage = document.getElementById('theaterStage');
+const theaterTitle = document.getElementById('theaterTitle');
+const theaterDesc = document.getElementById('theaterDesc');
+const theaterSide = document.getElementById('theaterSide');
+const theaterSideLabel = document.getElementById('theaterSideLabel');
+const theaterSideList = document.getElementById('theaterSideList');
+const theaterClose = document.getElementById('theaterClose');
+const theaterBackdrop = document.getElementById('theaterBackdrop');
 
-function openVideoModal(p) {
-  modalTitle.textContent = p.title;
-  modalDesc.textContent = p.desc;
+function setPanelShape(orientation) {
+  theaterPanel.classList.remove('vertical', 'square-media');
+  if (orientation === 'portrait') theaterPanel.classList.add('vertical');
+  if (orientation === 'square') theaterPanel.classList.add('square-media');
+}
 
-  const videoHtml = getModalVideoHtml(p);
-  modalVideo.innerHTML = videoHtml || `<div class="no-video">Video coming soon — add a YouTube/Vimeo link or a local file path (e.g. assets/videos/name.mp4) for "${p.title}".</div>`;
+function sideThumbClass(p) {
+  if (p.orientation === 'portrait') return 'portrait';
+  if (p.orientation === 'square') return 'square';
+  return '';
+}
 
-  modalContent.classList.toggle('vertical', p.orientation === 'portrait');
-
-  modal.classList.add('active');
+function openOverlay() {
+  theaterOverlay.classList.add('active');
   document.body.style.overflow = 'hidden';
 }
 
-function openModal(index) {
-  openVideoModal(PROJECTS[index]);
-}
-
-function closeModal() {
-  modal.classList.remove('active');
-  modalVideo.innerHTML = ''; // stop playback
+function closeOverlay() {
+  theaterOverlay.classList.remove('active');
+  theaterStage.innerHTML = ''; // stop playback
+  theaterStage.className = 'theater-stage';
   document.body.style.overflow = '';
 }
 
-modalClose.addEventListener('click', closeModal);
-modalBackdrop.addEventListener('click', closeModal);
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+// ---- Video: opens with a same-category "Up Next" sidebar ----
+function openMedia(index) {
+  const p = PROJECTS[index];
+  if (p.mediaType === 'image') {
+    openLightbox(index);
+  } else {
+    openTheaterVideo(index);
+  }
+}
+
+function openTheaterVideo(index) {
+  const p = PROJECTS[index];
+  const categoryEntries = PROJECTS
+    .map((proj, i) => ({ proj, i }))
+    .filter(o => o.proj.category === p.category);
+
+  theaterStage.className = 'theater-stage';
+  const videoHtml = getTheaterVideoHtml(p);
+  theaterStage.innerHTML = videoHtml || `<div class="no-media">Video coming soon for "${p.title}".</div>`;
+
+  setPanelShape(p.orientation);
+  theaterTitle.textContent = p.title;
+  theaterDesc.textContent = p.desc || '';
+
+  if (categoryEntries.length > 1) {
+    theaterSide.style.display = '';
+    theaterSideLabel.textContent = `Up Next — ${p.categoryLabel}`;
+    theaterSideList.innerHTML = categoryEntries.map(({ proj, i }) => `
+      <div class="side-item ${i === index ? 'active' : ''}" data-index="${i}">
+        <div class="side-thumb ${proj.thumb} ${sideThumbClass(proj)}"></div>
+        <div class="side-info">
+          <div class="t">${proj.title}${i === index ? ' — Now Playing' : ''}</div>
+          <div class="c">${proj.categoryLabel}</div>
+        </div>
+      </div>
+    `).join('');
+    theaterSideList.querySelectorAll('.side-item').forEach(el => {
+      el.addEventListener('click', () => openTheaterVideo(parseInt(el.dataset.index, 10)));
+    });
+  } else {
+    theaterSide.style.display = 'none';
+  }
+
+  openOverlay();
+}
+
+// ---- Showreel: same player, no sidebar (nothing to browse alongside it) ----
+function openShowreel() {
+  theaterStage.className = 'theater-stage';
+  const videoHtml = getTheaterVideoHtml(SHOWREEL);
+  theaterStage.innerHTML = videoHtml || `<div class="no-media">Video coming soon for "${SHOWREEL.title}".</div>`;
+
+  setPanelShape(SHOWREEL.orientation);
+  theaterTitle.textContent = SHOWREEL.title;
+  theaterDesc.textContent = SHOWREEL.desc || '';
+  theaterSide.style.display = 'none';
+
+  openOverlay();
+}
+
+// ---- Images: opens with prev/next arrows through the same category ----
+function openLightbox(index) {
+  const p = PROJECTS[index];
+  const categoryEntries = PROJECTS
+    .map((proj, i) => ({ proj, i }))
+    .filter(o => o.proj.category === p.category);
+  const pos = categoryEntries.findIndex(o => o.i === index);
+
+  const mediaHtml = p.imageUrl
+    ? `<img src="${p.imageUrl}" alt="${p.title}">`
+    : `<div class="no-media">Image coming soon for "${p.title}".</div>`;
+
+  const arrows = categoryEntries.length > 1
+    ? `<div class="lightbox-arrow prev">&lsaquo;</div><div class="lightbox-arrow next">&rsaquo;</div>`
+    : '';
+
+  theaterStage.className = `theater-stage ${p.imageUrl ? '' : p.thumb}`;
+  theaterStage.innerHTML = mediaHtml + arrows;
+
+  setPanelShape(p.orientation);
+  theaterTitle.textContent = p.title;
+  theaterDesc.textContent = p.desc || '';
+  theaterSide.style.display = 'none';
+
+  if (categoryEntries.length > 1) {
+    const prevIndex = categoryEntries[(pos - 1 + categoryEntries.length) % categoryEntries.length].i;
+    const nextIndex = categoryEntries[(pos + 1) % categoryEntries.length].i;
+    theaterStage.querySelector('.prev').addEventListener('click', e => { e.stopPropagation(); openLightbox(prevIndex); });
+    theaterStage.querySelector('.next').addEventListener('click', e => { e.stopPropagation(); openLightbox(nextIndex); });
+  }
+
+  openOverlay();
+}
+
+theaterClose.addEventListener('click', closeOverlay);
+theaterBackdrop.addEventListener('click', closeOverlay);
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeOverlay(); });
 
 // ============================================================
 // Hero showreel play button
 // ============================================================
-document.getElementById('reelPlayBtn').addEventListener('click', () => openVideoModal(SHOWREEL));
+document.getElementById('reelPlayBtn').addEventListener('click', openShowreel);
 
 // ============================================================
 // Hero visual — scale & fade smoothly as the user scrolls past
@@ -215,6 +336,6 @@ fetch('content/projects.json')
   .then(data => {
     PROJECTS = data.projects || [];
     SHOWREEL = data.showreel || SHOWREEL;
-    renderProjects();
+    renderProjects('all');
   })
   .catch(err => console.error('Failed to load content/projects.json', err));

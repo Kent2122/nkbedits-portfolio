@@ -89,10 +89,12 @@
 
   <div class="filters" id="filters">
     <button class="filter-btn active" data-filter="all">All</button>
-    <button class="filter-btn" data-filter="reels">Reels</button>
-    <button class="filter-btn" data-filter="commercial">Commercial</button>
-    <button class="filter-btn" data-filter="motion">Motion Graphics</button>
-    <button class="filter-btn" data-filter="color">Color Grading</button>
+    <button class="filter-btn" data-filter="shorts-reels">Shorts Reels</button>
+    <button class="filter-btn" data-filter="commercials">Commercials</button>
+    <button class="filter-btn" data-filter="motion-graphics">Motion Graphics</button>
+    <button class="filter-btn" data-filter="graphic-designs">Graphic Designs</button>
+    <button class="filter-btn" data-filter="logos">Logos</button>
+    <button class="filter-btn" data-filter="mascots">Mascots</button>
   </div>
 
   <div class="project-grid" id="projectGrid"></div>
@@ -165,15 +167,21 @@
   <p>&copy; <span id="year"></span> NKB Edits. All rights reserved.</p>
 </footer>
 
-<!-- VIDEO MODAL -->
-<div class="modal" id="videoModal">
-  <div class="modal-backdrop" id="modalBackdrop"></div>
-  <div class="modal-content">
-    <button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
-    <div class="modal-video" id="modalVideo"></div>
-    <div class="modal-info">
-      <h3 id="modalTitle"></h3>
-      <p id="modalDesc"></p>
+<!-- THEATER / LIGHTBOX OVERLAY -->
+<div class="theater-overlay" id="theaterOverlay">
+  <div class="theater-backdrop" id="theaterBackdrop"></div>
+  <button class="theater-close" id="theaterClose" aria-label="Close">&times;</button>
+  <div class="theater-panel" id="theaterPanel">
+    <div class="theater-main">
+      <div class="theater-stage" id="theaterStage"></div>
+      <div class="theater-info">
+        <h3 id="theaterTitle"></h3>
+        <p id="theaterDesc"></p>
+      </div>
+    </div>
+    <div class="theater-side" id="theaterSide">
+      <h4 id="theaterSideLabel"></h4>
+      <div id="theaterSideList"></div>
     </div>
   </div>
 </div>

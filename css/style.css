@@ -381,6 +381,9 @@ section { position: relative; padding: 120px 6vw; }
 .project-card[data-orientation="landscape"] {
   aspect-ratio: 16/9; /* horizontal videos — YouTube-style, full-bleed */
 }
+.project-card[data-orientation="square"] {
+  aspect-ratio: 1/1; /* logos/mascots */
+}
 .project-card:hover { transform: translateY(-6px); border-color: rgba(255,255,255,0.2); }
 .project-card.hidden { display: none; }
 
@@ -496,47 +499,119 @@ section { position: relative; padding: 120px 6vw; }
 
 .footer { text-align: center; padding: 2rem; border-top: 1px solid var(--border); color: var(--text-dim); font-size: 0.8rem; }
 
-/* ===== Modal ===== */
-.modal {
+/* ===== Theater / Lightbox overlay =====
+   One overlay handles both: videos get a real player + same-category
+   sidebar ("theater"); images get the same shell but with prev/next
+   arrows instead of a sidebar list driving playback. */
+.theater-overlay {
   position: fixed; inset: 0; z-index: 1000;
   display: none; align-items: center; justify-content: center;
   padding: 4vw;
 }
-.modal.active { display: flex; }
-.modal-backdrop { position: absolute; inset: 0; background: rgba(5,5,6,0.92); backdrop-filter: blur(6px); }
-.modal-content {
+.theater-overlay.active { display: flex; }
+.theater-backdrop { position: absolute; inset: 0; background: rgba(5,5,6,0.92); backdrop-filter: blur(6px); }
+
+.theater-close {
+  position: fixed; top: 1.6rem; right: 1.8rem; z-index: 1002;
+  width: 38px; height: 38px; border-radius: 50%;
+  background: rgba(255,255,255,0.08); backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.15); color: #fff;
+  font-size: 1.4rem; line-height: 1; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+.theater-close:hover { background: rgba(255,59,48,0.3); border-color: rgba(255,59,48,0.5); }
+
+.theater-panel {
   position: relative; z-index: 1;
-  width: 100%; max-width: 960px;
+  display: flex; gap: 1.4rem;
+  width: 100%; max-width: 980px;
   max-height: 90vh;
-  background: var(--bg-alt);
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  overflow-y: auto;
+  overflow: hidden;
+  background: linear-gradient(160deg, rgba(255,255,255,0.05), rgba(255,255,255,0.015));
+  backdrop-filter: blur(20px) saturate(160%);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 10px;
+  padding: 1.4rem;
+  box-shadow: 0 0 60px rgba(168,85,247,0.08), inset 0 1px 1px rgba(255,255,255,0.08);
   animation: modalIn 0.35s ease;
-  transition: max-width 0.2s ease;
 }
 @keyframes modalIn { from { opacity: 0; transform: scale(0.96) translateY(10px); } to { opacity: 1; transform: scale(1) translateY(0); } }
 
-.modal-close {
-  position: absolute; top: 0.8rem; right: 1rem; z-index: 2;
-  background: rgba(0,0,0,0.5); color: #fff; border: none;
-  width: 38px; height: 38px; border-radius: 50%;
-  font-size: 1.6rem; line-height: 1; cursor: pointer;
-  display: flex; align-items: center; justify-content: center;
+.theater-main { flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; }
+.theater-stage {
+  position: relative; width: 100%; aspect-ratio: 16/9;
+  border-radius: 6px; overflow: hidden; background: #000;
+  flex-shrink: 0;
 }
-.modal-close:hover { background: var(--accent); }
+.theater-stage video, .theater-stage iframe, .theater-stage img {
+  position: absolute; inset: 0; width: 100%; height: 100%; border: 0; object-fit: contain; background: #000;
+}
+.theater-info { padding: 1rem 0.2rem 0; overflow-y: auto; min-height: 0; }
+.theater-info h3 { font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; letter-spacing: 0.02em; }
+.theater-info p { font-size: 0.85rem; color: var(--text-dim); margin-top: 0.4rem; line-height: 1.5; }
 
-.modal-video { position: relative; width: 100%; aspect-ratio: 16/9; background: #000; }
-.modal-video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
-.modal-video video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; background: #000; }
+/* Vertical (portrait) media: narrow, height-driven — the panel hugs its
+   content instead of stretching to the full landscape width. */
+.theater-panel.vertical { width: auto; max-width: min(620px, 96vw); }
+.theater-panel.vertical .theater-main { flex: 0 0 auto; width: min(280px, calc((90vh - 220px) * 9 / 16)); }
+.theater-panel.vertical .theater-stage { aspect-ratio: 9/16; }
 
-/* Vertical/portrait videos get a tall, phone-shaped player instead of a
-   16:9 box with big empty bars on the sides. Width is capped by both an
-   absolute max AND by available viewport height (minus room for the
-   title/description block below the video), so short browser windows
-   never push the close button off-screen. */
-.modal-content.vertical { max-width: min(400px, calc((90vh - 150px) * 9 / 16)); }
-.modal-content.vertical .modal-video { aspect-ratio: 9/16; }
+/* Square media (logos/mascots) */
+.theater-panel.square-media { width: auto; max-width: min(700px, 96vw); }
+.theater-panel.square-media .theater-main { flex: 0 0 auto; width: min(420px, calc(90vh - 220px)); }
+.theater-panel.square-media .theater-stage { aspect-ratio: 1/1; }
+
+/* Same-category list — glass panel, subtle scrollbar */
+.theater-side {
+  flex: 0 0 280px;
+  overflow-y: auto;
+  padding-right: 0.4rem;
+  display: flex; flex-direction: column; gap: 0.5rem;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255,255,255,0.14) transparent;
+}
+.theater-side::-webkit-scrollbar { width: 5px; }
+.theater-side::-webkit-scrollbar-track { background: transparent; }
+.theater-side::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.14); border-radius: 10px; }
+.theater-side::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.3); }
+.theater-side h4 {
+  font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.12em;
+  color: rgba(255,255,255,0.4); margin-bottom: 0.3rem; padding: 0 0.3rem;
+}
+
+.side-item {
+  display: flex; gap: 0.7rem; padding: 0.5rem; border-radius: 8px; align-items: center;
+  background: rgba(255,255,255,0.02); border: 1px solid transparent; cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+.side-item:hover { background: rgba(255,255,255,0.06); }
+.side-item.active {
+  background: linear-gradient(135deg, rgba(168,85,247,0.14), rgba(236,72,153,0.09));
+  border: 1px solid rgba(236,72,153,0.3);
+}
+.side-thumb { width: 88px; aspect-ratio: 16/9; border-radius: 5px; flex-shrink: 0; }
+.side-thumb.portrait { width: 50px; aspect-ratio: 9/16; }
+.side-thumb.square { width: 60px; aspect-ratio: 1/1; }
+.side-info .t { font-size: 0.82rem; font-weight: 600; line-height: 1.3; }
+.side-info .c { font-size: 0.7rem; color: var(--text-dim); margin-top: 0.15rem; }
+
+/* Lightbox (image) prev/next arrows */
+.lightbox-arrow {
+  position: absolute; top: 50%; transform: translateY(-50%); z-index: 3;
+  width: 40px; height: 40px; border-radius: 50%;
+  background: rgba(255,255,255,0.1); backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.15); color: #fff;
+  display: flex; align-items: center; justify-content: center; font-size: 1.3rem; cursor: pointer;
+}
+.lightbox-arrow.prev { left: 0.7rem; }
+.lightbox-arrow.next { right: 0.7rem; }
+.lightbox-arrow:hover { background: rgba(255,255,255,0.2); }
+
+.no-media {
+  position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+  color: var(--text-dim); font-size: 0.9rem; text-align: center; padding: 2rem;
+}
 .modal-video .no-video {
   position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
   color: var(--text-dim); font-size: 0.9rem; text-align: center; padding: 2rem;

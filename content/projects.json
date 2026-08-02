@@ -1,14 +1,15 @@
 {
   "showreel": {
     "title": "Full Showreel",
-    "desc": "A mix of reels, commercials, music videos and color work — my editing style in one cut.",
+    "desc": "A mix of reels, commercials, motion graphics and design work — my editing style in one cut.",
     "embedUrl": ""
   },
   "projects": [
     {
       "title": "1-the-lucky-learner-campaign",
-      "category": "reels",
-      "categoryLabel": "Reels",
+      "category": "shorts-reels",
+      "categoryLabel": "Shorts Reels",
+      "mediaType": "video",
       "thumb": "thumb-1",
       "orientation": "portrait",
       "desc": "The Lucky Learner Campaign Promo Video For Saya App",
@@ -16,8 +17,9 @@
     },
     {
       "title": "2-ai-course-promo-2-saya-reel",
-      "category": "reels",
-      "categoryLabel": "Reels",
+      "category": "shorts-reels",
+      "categoryLabel": "Shorts Reels",
+      "mediaType": "video",
       "thumb": "thumb-2",
       "orientation": "portrait",
       "desc": "AI course Introduction For Saya App",
@@ -25,8 +27,9 @@
     },
     {
       "title": "3-campaign-reminder-saya-reel",
-      "category": "reels",
-      "categoryLabel": "Reels",
+      "category": "shorts-reels",
+      "categoryLabel": "Shorts Reels",
+      "mediaType": "video",
       "thumb": "thumb-3",
       "orientation": "portrait",
       "desc": "Campaigner Reminder Video",
@@ -34,8 +37,9 @@
     },
     {
       "title": "4-learn-plus-saya-reel",
-      "category": "reels",
-      "categoryLabel": "Reels",
+      "category": "shorts-reels",
+      "categoryLabel": "Shorts Reels",
+      "mediaType": "video",
       "thumb": "thumb-4",
       "orientation": "portrait",
       "desc": "Learn Plus Short Promotion",
@@ -43,8 +47,9 @@
     },
     {
       "title": "5-new-year-promotion-thingyan",
-      "category": "reels",
-      "categoryLabel": "Reels",
+      "category": "shorts-reels",
+      "categoryLabel": "Shorts Reels",
+      "mediaType": "video",
       "thumb": "thumb-5",
       "orientation": "portrait",
       "desc": "Promotion Ads for Saya App",
@@ -52,8 +57,9 @@
     },
     {
       "title": "6-refund-promotion-saya-reel",
-      "category": "reels",
-      "categoryLabel": "Reels",
+      "category": "shorts-reels",
+      "categoryLabel": "Shorts Reels",
+      "mediaType": "video",
       "thumb": "thumb-6",
       "orientation": "portrait",
       "desc": "",
@@ -61,8 +67,9 @@
     },
     {
       "title": "7-saya-promotion-reel-1",
-      "category": "reels",
-      "categoryLabel": "Reels",
+      "category": "shorts-reels",
+      "categoryLabel": "Shorts Reels",
+      "mediaType": "video",
       "thumb": "thumb-1",
       "orientation": "portrait",
       "desc": "",
@@ -70,8 +77,9 @@
     },
     {
       "title": "8-15000-mmk-promotion-saya-reel",
-      "category": "reels",
-      "categoryLabel": "Reels",
+      "category": "shorts-reels",
+      "categoryLabel": "Shorts Reels",
+      "mediaType": "video",
       "thumb": "thumb-2",
       "orientation": "portrait",
       "desc": "",
@@ -79,8 +87,9 @@
     },
     {
       "title": "9-ai-course-promo-saya-reel",
-      "category": "reels",
-      "categoryLabel": "Reels",
+      "category": "shorts-reels",
+      "categoryLabel": "Shorts Reels",
+      "mediaType": "video",
       "thumb": "thumb-3",
       "orientation": "portrait",
       "desc": "",
@@ -88,39 +97,123 @@
     },
     {
       "title": "Aurora Skincare — Launch Ad",
-      "category": "commercial",
-      "categoryLabel": "Commercial",
+      "category": "commercials",
+      "categoryLabel": "Commercials",
+      "mediaType": "video",
       "thumb": "thumb-2",
       "orientation": "landscape",
       "desc": "30s product launch commercial. Clean pacing, brand-safe color, on-screen captions.",
       "embedUrl": ""
     },
     {
+      "title": "Fitness App — Brand Spot",
+      "category": "commercials",
+      "categoryLabel": "Commercials",
+      "mediaType": "video",
+      "thumb": "thumb-6",
+      "orientation": "portrait",
+      "desc": "High-energy brand spot for a fitness app launch, cut for social + broadcast.",
+      "embedUrl": ""
+    },
+    {
       "title": "Motion Reveal — Brand Intro",
-      "category": "motion",
+      "category": "motion-graphics",
       "categoryLabel": "Motion Graphics",
+      "mediaType": "video",
       "thumb": "thumb-3",
       "orientation": "landscape",
       "desc": "Animated logo reveal and kinetic typography built as a brand's intro sequence — clean, on-beat motion design.",
       "embedUrl": ""
     },
     {
-      "title": "Golden Hour Grade",
-      "category": "color",
-      "categoryLabel": "Color Grading",
-      "thumb": "thumb-4",
-      "orientation": "landscape",
-      "desc": "Before/after color grading showcase — warm cinematic LUT built from scratch.",
-      "embedUrl": ""
+      "title": "Poster Set 01",
+      "category": "graphic-designs",
+      "categoryLabel": "Graphic Designs",
+      "mediaType": "image",
+      "thumb": "thumb-1",
+      "orientation": "portrait",
+      "desc": "Social media poster design.",
+      "imageUrl": ""
     },
     {
-      "title": "Fitness App — Brand Spot",
-      "category": "commercial",
-      "categoryLabel": "Commercial",
-      "thumb": "thumb-6",
+      "title": "Social Carousel",
+      "category": "graphic-designs",
+      "categoryLabel": "Graphic Designs",
+      "mediaType": "image",
+      "thumb": "thumb-4",
       "orientation": "portrait",
-      "desc": "High-energy brand spot for a fitness app launch, cut for social + broadcast.",
-      "embedUrl": ""
+      "desc": "Instagram carousel design set.",
+      "imageUrl": ""
+    },
+    {
+      "title": "Event Flyer",
+      "category": "graphic-designs",
+      "categoryLabel": "Graphic Designs",
+      "mediaType": "image",
+      "thumb": "thumb-5",
+      "orientation": "portrait",
+      "desc": "Promotional event flyer design.",
+      "imageUrl": ""
+    },
+    {
+      "title": "Pen Studio Logo",
+      "category": "logos",
+      "categoryLabel": "Logos",
+      "mediaType": "image",
+      "thumb": "thumb-2",
+      "orientation": "square",
+      "desc": "Logo design for The Pen Studio.",
+      "imageUrl": ""
+    },
+    {
+      "title": "SAYA App Logo",
+      "category": "logos",
+      "categoryLabel": "Logos",
+      "mediaType": "image",
+      "thumb": "thumb-3",
+      "orientation": "square",
+      "desc": "Logo design for SAYA App.",
+      "imageUrl": ""
+    },
+    {
+      "title": "Yes2Ger Logo",
+      "category": "logos",
+      "categoryLabel": "Logos",
+      "mediaType": "image",
+      "thumb": "thumb-6",
+      "orientation": "square",
+      "desc": "Logo design for Yes2Ger.",
+      "imageUrl": ""
+    },
+    {
+      "title": "SAYA Mascot",
+      "category": "mascots",
+      "categoryLabel": "Mascots",
+      "mediaType": "image",
+      "thumb": "thumb-4",
+      "orientation": "square",
+      "desc": "Mascot character design for SAYA App.",
+      "imageUrl": ""
+    },
+    {
+      "title": "BinaryLab Mascot",
+      "category": "mascots",
+      "categoryLabel": "Mascots",
+      "mediaType": "image",
+      "thumb": "thumb-1",
+      "orientation": "square",
+      "desc": "Mascot character design for BinaryLab.",
+      "imageUrl": ""
+    },
+    {
+      "title": "Learn Plus Mascot",
+      "category": "mascots",
+      "categoryLabel": "Mascots",
+      "mediaType": "image",
+      "thumb": "thumb-5",
+      "orientation": "square",
+      "desc": "Mascot character design for Learn Plus.",
+      "imageUrl": ""
     }
   ]
 }

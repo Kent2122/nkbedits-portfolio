@@ -37,22 +37,34 @@ collections:
                 name: "category"
                 widget: "select"
                 options:
-                  - { label: "Reels", value: "reels" }
-                  - { label: "Commercial", value: "commercial" }
-                  - { label: "Motion Graphics", value: "motion" }
-                  - { label: "Color Grading", value: "color" }
+                  - { label: "Shorts Reels", value: "shorts-reels" }
+                  - { label: "Commercials", value: "commercials" }
+                  - { label: "Motion Graphics", value: "motion-graphics" }
+                  - { label: "Graphic Designs", value: "graphic-designs" }
+                  - { label: "Logos", value: "logos" }
+                  - { label: "Mascots", value: "mascots" }
               - { label: "Category Label (shown on the card)", name: "categoryLabel", widget: "string" }
-              - label: "Video Orientation"
+              - label: "Media Type"
+                name: "mediaType"
+                widget: "select"
+                default: "video"
+                options:
+                  - { label: "Video", value: "video" }
+                  - { label: "Image", value: "image" }
+                hint: "Video gets hover-preview + a theater player with an Up Next list. Image opens a lightbox with prev/next arrows instead."
+              - label: "Orientation / Shape"
                 name: "orientation"
                 widget: "select"
                 default: "portrait"
                 options:
                   - { label: "Vertical / Shorts (tall card, full-bleed)", value: "portrait" }
                   - { label: "Horizontal / YouTube-style (wide card, full-bleed)", value: "landscape" }
+                  - { label: "Square (logos/mascots)", value: "square" }
               - label: "Thumbnail Style"
                 name: "thumb"
                 widget: "select"
                 options: ["thumb-1", "thumb-2", "thumb-3", "thumb-4", "thumb-5", "thumb-6"]
-                hint: "Placeholder gradient until you add real thumbnails."
+                hint: "Placeholder gradient until you add a real thumbnail/image."
               - { label: "Description", name: "desc", widget: "text" }
-              - { label: "Video Embed URL", name: "embedUrl", widget: "string", required: false, hint: "YouTube (https://www.youtube.com/embed/VIDEO_ID), Vimeo (https://player.vimeo.com/video/VIDEO_ID), or a local file path like assets/videos/name.mp4 — leave blank to show 'coming soon'." }
+              - { label: "Video Embed URL", name: "embedUrl", widget: "string", required: false, hint: "Only used when Media Type is Video. YouTube (https://www.youtube.com/embed/VIDEO_ID), Vimeo (https://player.vimeo.com/video/VIDEO_ID), or a local file path like assets/Reels/name.mp4 — leave blank to show 'coming soon'." }
+              - { label: "Image URL", name: "imageUrl", widget: "string", required: false, hint: "Only used when Media Type is Image. A local file path like assets/uploads/name.jpg — leave blank to show 'coming soon'." }
