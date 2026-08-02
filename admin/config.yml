@@ -1,8 +1,8 @@
 backend:
   name: github
-  repo: YOUR_GITHUB_USERNAME/YOUR_REPO_NAME   # e.g. nkbedits/nkbedits-portfolio
+  repo: Kent2122/nkbedits-portfolio
   branch: main
-  base_url: https://YOUR-PROJECT.vercel.app   # your Vercel deployment URL
+  base_url: https://nkbedits-portfolio.vercel.app
   auth_endpoint: api/auth
 
 # Commits made through the CMS will show up as this in git history.
