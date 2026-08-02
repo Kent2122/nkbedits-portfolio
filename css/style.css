@@ -397,6 +397,7 @@ section { position: relative; padding: 120px 6vw; }
 }
 .project-preview.active { opacity: 1; }
 .project-preview iframe { width: 100%; height: 100%; border: 0; }
+.project-preview video { width: 100%; height: 100%; object-fit: cover; }
 
 .project-overlay {
   position: absolute; inset: 0;
@@ -521,6 +522,7 @@ section { position: relative; padding: 120px 6vw; }
 
 .modal-video { position: relative; width: 100%; aspect-ratio: 16/9; background: #000; }
 .modal-video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.modal-video video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; background: #000; }
 .modal-video .no-video {
   position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
   color: var(--text-dim); font-size: 0.9rem; text-align: center; padding: 2rem;

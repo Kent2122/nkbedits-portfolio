@@ -33,12 +33,12 @@ function renderProjects() {
 
     if (!canHover) return;
 
-    const previewUrl = getHoverPreviewUrl(PROJECTS[index].embedUrl);
-    if (!previewUrl) return;
+    const previewHtml = getHoverPreviewHtml(PROJECTS[index].embedUrl);
+    if (!previewHtml) return;
 
     const previewEl = card.querySelector('.project-preview');
     card.addEventListener('mouseenter', () => {
-      previewEl.innerHTML = `<iframe src="${previewUrl}" allow="autoplay" frameborder="0"></iframe>`;
+      previewEl.innerHTML = previewHtml;
       requestAnimationFrame(() => previewEl.classList.add('active'));
     });
     card.addEventListener('mouseleave', () => {
@@ -49,23 +49,42 @@ function renderProjects() {
 }
 
 // ============================================================
-// Hover preview — builds a muted, looping, controls-free autoplay
-// URL from the same embedUrl used for the click-to-watch modal.
+// Video source helpers — a project's embedUrl is either a
+// YouTube/Vimeo link, or a local file path (e.g. "assets/videos/x.mp4").
 // ============================================================
-function getHoverPreviewUrl(embedUrl) {
+function isRemoteEmbed(url) {
+  return url.includes('youtube.com') || url.includes('vimeo.com');
+}
+
+// Full-size player used in the click-to-watch modal.
+function getModalVideoHtml(p) {
+  if (!p.embedUrl) return null;
+
+  if (isRemoteEmbed(p.embedUrl)) {
+    return `<iframe src="${p.embedUrl}?autoplay=1&rel=0" title="${p.title}" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>`;
+  }
+
+  return `<video src="${p.embedUrl}" controls autoplay playsinline></video>`;
+}
+
+// Muted, looping, controls-free preview used on thumbnail hover.
+function getHoverPreviewHtml(embedUrl) {
   if (!embedUrl) return null;
 
   if (embedUrl.includes('youtube.com')) {
     const idMatch = embedUrl.match(/embed\/([a-zA-Z0-9_-]+)/);
     const id = idMatch ? idMatch[1] : '';
-    return `${embedUrl}?autoplay=1&mute=1&controls=0&modestbranding=1&playsinline=1&loop=1&playlist=${id}&rel=0`;
+    const src = `${embedUrl}?autoplay=1&mute=1&controls=0&modestbranding=1&playsinline=1&loop=1&playlist=${id}&rel=0`;
+    return `<iframe src="${src}" allow="autoplay" frameborder="0"></iframe>`;
   }
 
   if (embedUrl.includes('vimeo.com')) {
-    return `${embedUrl}?autoplay=1&muted=1&background=1&loop=1`;
+    const src = `${embedUrl}?autoplay=1&muted=1&background=1&loop=1`;
+    return `<iframe src="${src}" allow="autoplay" frameborder="0"></iframe>`;
   }
 
-  return null;
+  // local self-hosted video file
+  return `<video src="${embedUrl}" muted loop autoplay playsinline></video>`;
 }
 
 // ============================================================
@@ -98,11 +117,8 @@ function openVideoModal(p) {
   modalTitle.textContent = p.title;
   modalDesc.textContent = p.desc;
 
-  if (p.embedUrl) {
-    modalVideo.innerHTML = `<iframe src="${p.embedUrl}?autoplay=1&rel=0" title="${p.title}" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>`;
-  } else {
-    modalVideo.innerHTML = `<div class="no-video">Video coming soon — swap in a YouTube/Vimeo embed link in js/main.js for "${p.title}".</div>`;
-  }
+  const videoHtml = getModalVideoHtml(p);
+  modalVideo.innerHTML = videoHtml || `<div class="no-video">Video coming soon — add a YouTube/Vimeo link or a local file path (e.g. assets/videos/name.mp4) for "${p.title}".</div>`;
 
   modal.classList.add('active');
   document.body.style.overflow = 'hidden';
