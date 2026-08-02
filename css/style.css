@@ -507,10 +507,11 @@ section { position: relative; padding: 120px 6vw; }
 .modal-content {
   position: relative; z-index: 1;
   width: 100%; max-width: 960px;
+  max-height: 90vh;
   background: var(--bg-alt);
   border: 1px solid var(--border);
   border-radius: 6px;
-  overflow: hidden;
+  overflow-y: auto;
   animation: modalIn 0.35s ease;
   transition: max-width 0.2s ease;
 }
@@ -530,8 +531,11 @@ section { position: relative; padding: 120px 6vw; }
 .modal-video video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; background: #000; }
 
 /* Vertical/portrait videos get a tall, phone-shaped player instead of a
-   16:9 box with big empty bars on the sides. */
-.modal-content.vertical { max-width: 400px; }
+   16:9 box with big empty bars on the sides. Width is capped by both an
+   absolute max AND by available viewport height (minus room for the
+   title/description block below the video), so short browser windows
+   never push the close button off-screen. */
+.modal-content.vertical { max-width: min(400px, calc((90vh - 150px) * 9 / 16)); }
 .modal-content.vertical .modal-video { aspect-ratio: 9/16; }
 .modal-video .no-video {
   position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
