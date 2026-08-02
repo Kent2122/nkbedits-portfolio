@@ -107,6 +107,7 @@ filterBtns.forEach(btn => {
 // Modal
 // ============================================================
 const modal = document.getElementById('videoModal');
+const modalContent = document.querySelector('.modal-content');
 const modalVideo = document.getElementById('modalVideo');
 const modalTitle = document.getElementById('modalTitle');
 const modalDesc = document.getElementById('modalDesc');
@@ -119,6 +120,8 @@ function openVideoModal(p) {
 
   const videoHtml = getModalVideoHtml(p);
   modalVideo.innerHTML = videoHtml || `<div class="no-video">Video coming soon — add a YouTube/Vimeo link or a local file path (e.g. assets/videos/name.mp4) for "${p.title}".</div>`;
+
+  modalContent.classList.toggle('vertical', p.orientation === 'portrait');
 
   modal.classList.add('active');
   document.body.style.overflow = 'hidden';
