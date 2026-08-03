@@ -60,11 +60,16 @@ collections:
                   - { label: "Vertical / Shorts (tall card, full-bleed)", value: "portrait" }
                   - { label: "Horizontal / YouTube-style (wide card, full-bleed)", value: "landscape" }
                   - { label: "Square (logos/mascots)", value: "square" }
-              - label: "Thumbnail Style"
+              - label: "Thumbnail Image"
+                name: "thumbnailUrl"
+                widget: "image"
+                required: false
+                hint: "Upload your own thumbnail here — once set, it replaces the placeholder gradient below on the grid card."
+              - label: "Thumbnail Style (placeholder gradient)"
                 name: "thumb"
                 widget: "select"
                 options: ["thumb-1", "thumb-2", "thumb-3", "thumb-4", "thumb-5", "thumb-6"]
-                hint: "Placeholder gradient until you add a real thumbnail/image."
+                hint: "Only used as a fallback color when no Thumbnail Image is uploaded above."
               - { label: "Description", name: "desc", widget: "text" }
               - { label: "Video Embed URL", name: "embedUrl", widget: "string", required: false, hint: "Only used when Media Type is Video. YouTube (https://www.youtube.com/embed/VIDEO_ID), Vimeo (https://player.vimeo.com/video/VIDEO_ID), or a local file path like assets/Reels/name.mp4 — leave blank to show 'coming soon'." }
               - { label: "Image URL", name: "imageUrl", widget: "string", required: false, hint: "Only used when Media Type is Image. A local file path like assets/uploads/name.jpg — leave blank to show 'coming soon'." }

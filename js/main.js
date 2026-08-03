@@ -30,9 +30,11 @@ function getVisibleEntries(filter) {
 
 function cardHtml({ p, i }) {
   const playBtn = p.mediaType === 'video' ? '<div class="play-btn"></div>' : '';
+  const thumbImg = p.thumbnailUrl ? `<img src="${p.thumbnailUrl}" alt="">` : '';
   return `
     <div class="project-card" data-category="${p.category}" data-index="${i}" data-orientation="${p.orientation || 'portrait'}">
-      <div class="project-thumb ${p.thumb}">
+      <div class="project-thumb ${p.thumbnailUrl ? '' : p.thumb}">
+        ${thumbImg}
         <div class="project-preview"></div>
       </div>
       <span class="project-tag">${p.categoryLabel}</span>
