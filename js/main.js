@@ -49,6 +49,7 @@ function cardHtml({ p, i }) {
 
 function renderProjects(filter) {
   currentFilter = filter || currentFilter;
+  grid.dataset.filter = currentFilter;
   const entries = getVisibleEntries(currentFilter);
   grid.innerHTML = entries.map(cardHtml).join('');
 

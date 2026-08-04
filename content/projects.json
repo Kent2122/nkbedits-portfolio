@@ -96,23 +96,83 @@
       "embedUrl": "assets/Reels/9-ai-course-promo-saya-reel.mp4"
     },
     {
-      "title": "Aurora Skincare — Launch Ad",
+      "title": "Commercial 01",
+      "category": "commercials",
+      "categoryLabel": "Commercials",
+      "mediaType": "video",
+      "thumb": "thumb-1",
+      "orientation": "landscape",
+      "desc": "",
+      "embedUrl": ""
+    },
+    {
+      "title": "Commercial 02",
       "category": "commercials",
       "categoryLabel": "Commercials",
       "mediaType": "video",
       "thumb": "thumb-2",
       "orientation": "landscape",
-      "desc": "30s product launch commercial. Clean pacing, brand-safe color, on-screen captions.",
+      "desc": "",
       "embedUrl": ""
     },
     {
-      "title": "Fitness App — Brand Spot",
+      "title": "Commercial 03",
+      "category": "commercials",
+      "categoryLabel": "Commercials",
+      "mediaType": "video",
+      "thumb": "thumb-3",
+      "orientation": "landscape",
+      "desc": "",
+      "embedUrl": ""
+    },
+    {
+      "title": "Commercial 04",
+      "category": "commercials",
+      "categoryLabel": "Commercials",
+      "mediaType": "video",
+      "thumb": "thumb-4",
+      "orientation": "landscape",
+      "desc": "",
+      "embedUrl": ""
+    },
+    {
+      "title": "Commercial 05",
+      "category": "commercials",
+      "categoryLabel": "Commercials",
+      "mediaType": "video",
+      "thumb": "thumb-5",
+      "orientation": "landscape",
+      "desc": "",
+      "embedUrl": ""
+    },
+    {
+      "title": "Commercial 06",
       "category": "commercials",
       "categoryLabel": "Commercials",
       "mediaType": "video",
       "thumb": "thumb-6",
-      "orientation": "portrait",
-      "desc": "High-energy brand spot for a fitness app launch, cut for social + broadcast.",
+      "orientation": "landscape",
+      "desc": "",
+      "embedUrl": ""
+    },
+    {
+      "title": "Commercial 07",
+      "category": "commercials",
+      "categoryLabel": "Commercials",
+      "mediaType": "video",
+      "thumb": "thumb-1",
+      "orientation": "landscape",
+      "desc": "",
+      "embedUrl": ""
+    },
+    {
+      "title": "Commercial 08",
+      "category": "commercials",
+      "categoryLabel": "Commercials",
+      "mediaType": "video",
+      "thumb": "thumb-2",
+      "orientation": "landscape",
+      "desc": "",
       "embedUrl": ""
     },
     {

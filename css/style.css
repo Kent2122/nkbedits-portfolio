@@ -366,6 +366,10 @@ section { position: relative; padding: 120px 6vw; }
   column-count: 3;
   column-gap: 1.5rem;
 }
+/* Commercials: 8 landscape videos, 2 columns × 4 rows */
+.project-grid[data-filter="commercials"] {
+  column-count: 2;
+}
 .project-card {
   position: relative;
   aspect-ratio: 4/5; /* portrait/vertical videos — shorts-style, full-bleed */
@@ -668,4 +672,5 @@ section { position: relative; padding: 120px 6vw; }
 
 @media (max-width: 480px) {
   .project-grid { column-count: 1; }
+  .project-grid[data-filter="commercials"] { column-count: 1; }
 }
