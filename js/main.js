@@ -196,7 +196,9 @@ function openTheaterVideo(index) {
     theaterSideLabel.textContent = `Up Next — ${p.categoryLabel}`;
     theaterSideList.innerHTML = categoryEntries.map(({ proj, i }) => `
       <div class="side-item ${i === index ? 'active' : ''}" data-index="${i}">
-        <div class="side-thumb ${proj.thumb} ${sideThumbClass(proj)}"></div>
+        <div class="side-thumb ${proj.thumbnailUrl ? '' : proj.thumb} ${sideThumbClass(proj)}">
+          ${proj.thumbnailUrl ? `<img src="${proj.thumbnailUrl}" alt="">` : ''}
+        </div>
         <div class="side-info">
           <div class="t">${proj.title}${i === index ? ' — Now Playing' : ''}</div>
           <div class="c">${proj.categoryLabel}</div>
@@ -235,15 +237,16 @@ function openLightbox(index) {
     .filter(o => o.proj.category === p.category);
   const pos = categoryEntries.findIndex(o => o.i === index);
 
-  const mediaHtml = p.imageUrl
-    ? `<img src="${p.imageUrl}" alt="${p.title}">`
+  const displayImage = p.imageUrl || p.thumbnailUrl;
+  const mediaHtml = displayImage
+    ? `<img src="${displayImage}" alt="${p.title}">`
     : `<div class="no-media">Image coming soon for "${p.title}".</div>`;
 
   const arrows = categoryEntries.length > 1
     ? `<div class="lightbox-arrow prev">&lsaquo;</div><div class="lightbox-arrow next">&rsaquo;</div>`
     : '';
 
-  theaterStage.className = `theater-stage ${p.imageUrl ? '' : p.thumb}`;
+  theaterStage.className = `theater-stage ${displayImage ? '' : p.thumb}`;
   theaterStage.innerHTML = mediaHtml + arrows;
 
   setPanelShape(p.orientation);
