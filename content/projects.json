@@ -110,7 +110,7 @@
       "desc": "SAYA APP New Year Promotion 2024",
       "categoryLabel": "Commercials",
       "thumb": "thumb-1",
-      "embedUrl": "\\assets\\Commercials\\1-New-Year-Promotion-SAYA-APP-2024.mp4",
+      "embedUrl": "assets/Commercials/1-New-Year-Promotion-SAYA-APP-2024.mp4",
       "title": "SAYA New Year Promotion 2024",
       "category": "commercials",
       "mediaType": "video"
@@ -121,7 +121,7 @@
       "desc": "Saya is Here!",
       "categoryLabel": "Commercials",
       "thumb": "thumb-2",
-      "embedUrl": "assets\\Commercials\\2-SAYA-is-Here-Final-Promo~1.mp4",
+      "embedUrl": "assets/Commercials/2-SAYA-is-Here-Final-Promo~1.mp4",
       "title": "SAYA is Here Mini Ads",
       "category": "commercials",
       "mediaType": "video"
@@ -132,7 +132,7 @@
       "desc": "တန်ဆောင်တိုင် Promotion - SAYA APP",
       "categoryLabel": "Commercials",
       "thumb": "thumb-3",
-      "embedUrl": "assets\\Commercials\\3-SAYA-App - Ta Saung-Taing-Promo~1.mp4",
+      "embedUrl": "assets/Commercials/3-SAYA-App - Ta Saung-Taing-Promo~1.mp4",
       "title": "တန်ဆောင်တိုင် Promotion - SAYA APP",
       "category": "commercials",
       "mediaType": "video"
@@ -143,7 +143,7 @@
       "desc": "SAYA TVC",
       "categoryLabel": "Commercials",
       "thumb": "thumb-4",
-      "embedUrl": "assets\\Commercials\\4-SAYA-TVC~1.mp4",
+      "embedUrl": "assets/Commercials/4-SAYA-TVC~1.mp4",
       "title": "SAYA TVC",
       "category": "commercials",
       "mediaType": "video"
@@ -154,7 +154,7 @@
       "desc": "တန်ဆောင်တိုင် Promotion - SAYA APP",
       "categoryLabel": "Commercials",
       "thumb": "thumb-5",
-      "embedUrl": "assets\\Commercials\\5-Ta-Saung-Taing-Promotion-SAYA-App~1.mp4",
+      "embedUrl": "assets/Commercials/5-Ta-Saung-Taing-Promotion-SAYA-App~1.mp4",
       "title": "တန်ဆောင်တိုင် Promotion - SAYA APP",
       "category": "commercials",
       "mediaType": "video"
@@ -165,7 +165,7 @@
       "desc": "Using Idioms at Office - Funny Video",
       "categoryLabel": "Commercials",
       "thumb": "thumb-6",
-      "embedUrl": "assets\\Commercials\\6-Using-Idioms-at-Office-Funny-Video~1.mp4",
+      "embedUrl": "assets/Commercials/6-Using-Idioms-at-Office-Funny-Video~1.mp4",
       "title": "Using Idioms at Office - Funny Video",
       "category": "commercials",
       "mediaType": "video"
@@ -176,7 +176,7 @@
       "desc": "SAYA Promotion Commercial",
       "categoryLabel": "Commercials",
       "thumb": "thumb-1",
-      "embedUrl": "assets\\Commercials\\7-SAYA-Promo-Commercial~1.mp4",
+      "embedUrl": "",
       "title": "SAYA Promotion Commercial",
       "category": "commercials",
       "mediaType": "video"
@@ -187,7 +187,7 @@
       "desc": "Learning a language in your daily work life",
       "categoryLabel": "Commercials",
       "thumb": "thumb-2",
-      "embedUrl": "assets\\Commercials\\8-Learning-a-Lauguage-in-your-daily-busy-work-Life~1.mp4",
+      "embedUrl": "assets/Commercials/8-Learning-a-Lauguage-in-your-daily-busy-work-Life~1.mp4",
       "title": "Learning a language in your daily work life",
       "category": "commercials",
       "mediaType": "video"
