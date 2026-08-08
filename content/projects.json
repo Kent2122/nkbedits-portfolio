@@ -193,214 +193,235 @@
       "mediaType": "video"
     },
     {
-      "title": "Motion Graphic 01",
+      "title": "Learn English Anytime, Anywhere with SAYA App",
       "category": "motion-graphics",
       "categoryLabel": "Motion Graphics",
       "mediaType": "video",
       "thumb": "thumb-1",
       "orientation": "landscape",
       "desc": "",
-      "embedUrl": ""
+      "embedUrl": "assets/Motion Graphics/landscape/1-Learn-English-anytime-anywhere-with-SAYA-App.mp4",
+      "thumbnailUrl": "assets/Motion Graphics/landscape/1-Learn-English-anytime-anywhere-with-SAYA-App.png"
     },
     {
-      "title": "Motion Graphic 02",
+      "title": "The Pen Studio — Think Fast",
       "category": "motion-graphics",
       "categoryLabel": "Motion Graphics",
       "mediaType": "video",
       "thumb": "thumb-2",
       "orientation": "portrait",
       "desc": "",
-      "embedUrl": ""
+      "embedUrl": "assets/Motion Graphics/portrait/0-The-Pen-Studio-Think-Fast.mp4",
+      "thumbnailUrl": "assets/Motion Graphics/portrait/0-The-Pen-Studio-Think-Fast.png"
     },
     {
-      "title": "Motion Graphic 03",
+      "title": "The Pen Studio Intro",
       "category": "motion-graphics",
       "categoryLabel": "Motion Graphics",
       "mediaType": "video",
       "thumb": "thumb-3",
       "orientation": "square",
       "desc": "",
-      "embedUrl": ""
+      "embedUrl": "assets/Motion Graphics/square/1-The-Pen-Studio-Intro.mp4",
+      "thumbnailUrl": "assets/Motion Graphics/square/1-The-Pen-Studio-Intro.png"
     },
     {
-      "title": "Motion Graphic 04",
+      "title": "BinaryLab Showreel",
       "category": "motion-graphics",
       "categoryLabel": "Motion Graphics",
       "mediaType": "video",
       "thumb": "thumb-4",
       "orientation": "landscape",
       "desc": "",
-      "embedUrl": ""
+      "embedUrl": "assets/Motion Graphics/landscape/2-BinaryLab-Showreel.mp4",
+      "thumbnailUrl": "assets/Motion Graphics/landscape/2-BinaryLab-Showreel.png"
     },
     {
-      "title": "Motion Graphic 05",
+      "title": "TPS Story",
       "category": "motion-graphics",
       "categoryLabel": "Motion Graphics",
       "mediaType": "video",
       "thumb": "thumb-5",
       "orientation": "portrait",
       "desc": "",
-      "embedUrl": ""
+      "embedUrl": "assets/Motion Graphics/portrait/2-TPS-Story.mp4",
+      "thumbnailUrl": "assets/Motion Graphics/portrait/2-TPS-Story.png"
     },
     {
-      "title": "Motion Graphic 06",
+      "title": "Delicious Coffee Ads",
       "category": "motion-graphics",
       "categoryLabel": "Motion Graphics",
       "mediaType": "video",
       "thumb": "thumb-6",
       "orientation": "square",
       "desc": "",
-      "embedUrl": ""
+      "embedUrl": "assets/Motion Graphics/square/2-Delicious-Coffee-Ads.mp4",
+      "thumbnailUrl": "assets/Motion Graphics/square/2-Delicious-Coffee-Ads.png"
     },
     {
-      "title": "Motion Graphic 07",
+      "title": "SAYA App 15 Secs Trailer",
       "category": "motion-graphics",
       "categoryLabel": "Motion Graphics",
       "mediaType": "video",
       "thumb": "thumb-1",
       "orientation": "landscape",
       "desc": "",
-      "embedUrl": ""
+      "embedUrl": "assets/Motion Graphics/landscape/3-SAYA-App-15-secs-Trailer.mp4",
+      "thumbnailUrl": "assets/Motion Graphics/landscape/3-SAYA-App-15-secs-Trailer.png"
     },
     {
-      "title": "Motion Graphic 08",
+      "title": "Poh Deli Now — Motion",
       "category": "motion-graphics",
       "categoryLabel": "Motion Graphics",
       "mediaType": "video",
       "thumb": "thumb-2",
       "orientation": "portrait",
       "desc": "",
-      "embedUrl": ""
+      "embedUrl": "assets/Motion Graphics/portrait/3-poh-deli-now-motion.mp4",
+      "thumbnailUrl": "assets/Motion Graphics/portrait/3-poh-deli-now-motion.png"
     },
     {
-      "title": "Motion Graphic 09",
+      "title": "Final Xmas Mograph",
       "category": "motion-graphics",
       "categoryLabel": "Motion Graphics",
       "mediaType": "video",
       "thumb": "thumb-3",
       "orientation": "square",
       "desc": "",
-      "embedUrl": ""
+      "embedUrl": "assets/Motion Graphics/square/3-Final-Xmas-Mograph.mp4",
+      "thumbnailUrl": "assets/Motion Graphics/square/3-Final-Xmas-Mograph.png"
     },
     {
-      "title": "Motion Graphic 10",
+      "title": "The Pen Studio Logo Reel 1",
       "category": "motion-graphics",
       "categoryLabel": "Motion Graphics",
       "mediaType": "video",
       "thumb": "thumb-4",
       "orientation": "landscape",
       "desc": "",
-      "embedUrl": ""
+      "embedUrl": "assets/Motion Graphics/landscape/4-The-Pen-Studio-Logo-Reel-1.mp4",
+      "thumbnailUrl": "assets/Motion Graphics/landscape/4-The-Pen-Studio-Logo-Reel-1.png"
     },
     {
-      "title": "Motion Graphic 11",
+      "title": "Germany Ads 1",
       "category": "motion-graphics",
       "categoryLabel": "Motion Graphics",
       "mediaType": "video",
       "thumb": "thumb-5",
       "orientation": "portrait",
       "desc": "",
-      "embedUrl": ""
+      "embedUrl": "assets/Motion Graphics/portrait/Germany Ads 1.mp4",
+      "thumbnailUrl": "assets/Motion Graphics/portrait/Germany Ads 1.png"
     },
     {
-      "title": "Motion Graphic 12",
+      "title": "Free PDF Motion",
       "category": "motion-graphics",
       "categoryLabel": "Motion Graphics",
       "mediaType": "video",
       "thumb": "thumb-6",
       "orientation": "square",
       "desc": "",
-      "embedUrl": ""
+      "embedUrl": "assets/Motion Graphics/square/4-Free-Pdf-Motion.mp4",
+      "thumbnailUrl": "assets/Motion Graphics/square/4-Free-Pdf-Motion.png"
     },
     {
-      "title": "Motion Graphic 13",
+      "title": "The Pen Studio Logo Reel 2",
       "category": "motion-graphics",
       "categoryLabel": "Motion Graphics",
       "mediaType": "video",
       "thumb": "thumb-1",
       "orientation": "landscape",
       "desc": "",
-      "embedUrl": ""
+      "embedUrl": "assets/Motion Graphics/landscape/5-The-Pen-Studio-Logo-Reel-2.mp4",
+      "thumbnailUrl": "assets/Motion Graphics/landscape/5-The-Pen-Studio-Logo-Reel-2.png"
     },
     {
-      "title": "Motion Graphic 14",
+      "title": "SAYA Motion 1",
       "category": "motion-graphics",
       "categoryLabel": "Motion Graphics",
       "mediaType": "video",
       "thumb": "thumb-2",
       "orientation": "portrait",
       "desc": "",
-      "embedUrl": ""
+      "embedUrl": "assets/Motion Graphics/portrait/SAYA motion 1.mp4",
+      "thumbnailUrl": "assets/Motion Graphics/portrait/SAYA motion 1.png"
     },
     {
-      "title": "Motion Graphic 15",
+      "title": "How to Use SAYA Out of Country",
       "category": "motion-graphics",
       "categoryLabel": "Motion Graphics",
       "mediaType": "video",
       "thumb": "thumb-3",
       "orientation": "square",
       "desc": "",
-      "embedUrl": ""
+      "embedUrl": "assets/Motion Graphics/square/5-How-to-Use-SAYA-Out-of-Country.mp4",
+      "thumbnailUrl": "assets/Motion Graphics/square/5-How-to-Use-SAYA-Out-of-Country.png"
     },
     {
-      "title": "Motion Graphic 16",
+      "title": "SAYA Animation Thadingyut",
       "category": "motion-graphics",
       "categoryLabel": "Motion Graphics",
       "mediaType": "video",
       "thumb": "thumb-4",
       "orientation": "landscape",
       "desc": "",
-      "embedUrl": ""
+      "embedUrl": "assets/Motion Graphics/landscape/6-saya-animation-thadingyut.mp4",
+      "thumbnailUrl": "assets/Motion Graphics/landscape/6-saya-animation-thadingyut.png"
     },
     {
-      "title": "Motion Graphic 17",
+      "title": "SAYA Motion 2",
       "category": "motion-graphics",
       "categoryLabel": "Motion Graphics",
       "mediaType": "video",
       "thumb": "thumb-5",
       "orientation": "portrait",
       "desc": "",
-      "embedUrl": ""
+      "embedUrl": "assets/Motion Graphics/portrait/SAYA motion 2.mp4",
+      "thumbnailUrl": "assets/Motion Graphics/portrait/SAYA motion 2.png"
     },
     {
-      "title": "Motion Graphic 18",
+      "title": "Pros and Cons of Germany",
       "category": "motion-graphics",
       "categoryLabel": "Motion Graphics",
       "mediaType": "video",
       "thumb": "thumb-6",
       "orientation": "square",
       "desc": "",
-      "embedUrl": ""
+      "embedUrl": "assets/Motion Graphics/square/6-Pros-and-Cons-of-Germany.mp4",
+      "thumbnailUrl": "assets/Motion Graphics/square/6-Pros-and-Cons-of-Germany.png"
     },
     {
-      "title": "Motion Graphic 19",
+      "title": "MCPA Login Instruction",
       "category": "motion-graphics",
       "categoryLabel": "Motion Graphics",
       "mediaType": "video",
       "thumb": "thumb-1",
       "orientation": "landscape",
       "desc": "",
-      "embedUrl": ""
+      "embedUrl": "assets/Motion Graphics/landscape/7-MCPA-Login-Instruction.mp4",
+      "thumbnailUrl": "assets/Motion Graphics/landscape/7-MCPA-Login-Instruction.png"
     },
     {
-      "title": "Motion Graphic 20",
+      "title": "Yes2Ger — Services We Offer",
       "category": "motion-graphics",
       "categoryLabel": "Motion Graphics",
       "mediaType": "video",
       "thumb": "thumb-2",
       "orientation": "portrait",
       "desc": "",
-      "embedUrl": ""
+      "embedUrl": "assets/Motion Graphics/portrait/Yes2Ger Services we offer.mp4",
+      "thumbnailUrl": "assets/Motion Graphics/portrait/Yes2Ger Services we offer.png"
     },
     {
-      "title": "Motion Graphic 21",
+      "title": "Poh Deli Now — Motion Ads",
       "category": "motion-graphics",
       "categoryLabel": "Motion Graphics",
       "mediaType": "video",
       "thumb": "thumb-3",
       "orientation": "square",
       "desc": "",
-      "embedUrl": ""
+      "embedUrl": "assets/Motion Graphics/square/7-Poh-deli-now-motion-ads.mp4",
+      "thumbnailUrl": "assets/Motion Graphics/square/7-Poh-deli-now-motion-ads.png"
     },
     {
       "title": "Poster Set 01",
