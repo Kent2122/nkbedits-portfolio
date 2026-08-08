@@ -25,6 +25,13 @@ collections:
             fields:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Description", name: "desc", widget: "text" }
+              - label: "Orientation / Shape"
+                name: "orientation"
+                widget: "select"
+                default: "landscape"
+                options:
+                  - { label: "Vertical", value: "portrait" }
+                  - { label: "Horizontal", value: "landscape" }
               - { label: "Video Embed URL", name: "embedUrl", widget: "string", required: false, hint: "YouTube (https://www.youtube.com/embed/VIDEO_ID), Vimeo (https://player.vimeo.com/video/VIDEO_ID), or a local file path like assets/videos/name.mp4 — leave blank to show 'coming soon'." }
 
           - label: "Projects"

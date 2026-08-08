@@ -1,8 +1,9 @@
 {
   "showreel": {
-    "title": "Full Showreel",
+    "title": "About Me — Motion Graphics Portfolio",
     "desc": "A mix of reels, commercials, motion graphics and design work — my editing style in one cut.",
-    "embedUrl": ""
+    "orientation": "landscape",
+    "embedUrl": "assets/showreel.mp4"
   },
   "projects": [
     {
