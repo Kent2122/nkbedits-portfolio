@@ -424,34 +424,81 @@
       "thumbnailUrl": "assets/Motion Graphics/square/7-Poh-deli-now-motion-ads.png"
     },
     {
-      "title": "Poster Set 01",
+      "title": "SAYA — Kanji Pronunciation",
       "category": "graphic-designs",
       "categoryLabel": "Graphic Designs",
       "mediaType": "image",
       "thumb": "thumb-1",
-      "orientation": "portrait",
-      "desc": "Social media poster design.",
-      "imageUrl": ""
+      "orientation": "square",
+      "desc": "",
+      "imageUrl": "assets/Graphics Designs/Design (1).jpg",
+      "thumbnailUrl": "assets/Graphics Designs/Design (1).jpg"
     },
     {
-      "title": "Social Carousel",
+      "title": "SAYA — Taxi Phrase",
+      "category": "graphic-designs",
+      "categoryLabel": "Graphic Designs",
+      "mediaType": "image",
+      "thumb": "thumb-2",
+      "orientation": "square",
+      "desc": "",
+      "imageUrl": "assets/Graphics Designs/Design (2).jpg",
+      "thumbnailUrl": "assets/Graphics Designs/Design (2).jpg"
+    },
+    {
+      "title": "SAYA — Giveaway Promo",
+      "category": "graphic-designs",
+      "categoryLabel": "Graphic Designs",
+      "mediaType": "image",
+      "thumb": "thumb-3",
+      "orientation": "square",
+      "desc": "",
+      "imageUrl": "assets/Graphics Designs/Design (3).jpg",
+      "thumbnailUrl": "assets/Graphics Designs/Design (3).jpg"
+    },
+    {
+      "title": "SAYA — Pronunciation",
       "category": "graphic-designs",
       "categoryLabel": "Graphic Designs",
       "mediaType": "image",
       "thumb": "thumb-4",
-      "orientation": "portrait",
-      "desc": "Instagram carousel design set.",
-      "imageUrl": ""
+      "orientation": "square",
+      "desc": "",
+      "imageUrl": "assets/Graphics Designs/Design (4).png",
+      "thumbnailUrl": "assets/Graphics Designs/Design (4).png"
     },
     {
-      "title": "Event Flyer",
+      "title": "SAYA — Native Speaker Class",
       "category": "graphic-designs",
       "categoryLabel": "Graphic Designs",
       "mediaType": "image",
       "thumb": "thumb-5",
-      "orientation": "portrait",
-      "desc": "Promotional event flyer design.",
-      "imageUrl": ""
+      "orientation": "square",
+      "desc": "",
+      "imageUrl": "assets/Graphics Designs/Design (5).jpg",
+      "thumbnailUrl": "assets/Graphics Designs/Design (5).jpg"
+    },
+    {
+      "title": "SAYA — App Promotion",
+      "category": "graphic-designs",
+      "categoryLabel": "Graphic Designs",
+      "mediaType": "image",
+      "thumb": "thumb-6",
+      "orientation": "square",
+      "desc": "",
+      "imageUrl": "assets/Graphics Designs/Design (6).jpg",
+      "thumbnailUrl": "assets/Graphics Designs/Design (6).jpg"
+    },
+    {
+      "title": "SAYA — 30% Off Promotion",
+      "category": "graphic-designs",
+      "categoryLabel": "Graphic Designs",
+      "mediaType": "image",
+      "thumb": "thumb-1",
+      "orientation": "square",
+      "desc": "",
+      "imageUrl": "assets/Graphics Designs/Design (8).jpg",
+      "thumbnailUrl": "assets/Graphics Designs/Design (8).jpg"
     },
     {
       "title": "The Pen Studio",
