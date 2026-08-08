@@ -454,34 +454,158 @@
       "imageUrl": ""
     },
     {
-      "title": "Pen Studio Logo",
+      "title": "The Pen Studio",
+      "category": "logos",
+      "categoryLabel": "Logos",
+      "mediaType": "image",
+      "thumb": "thumb-1",
+      "orientation": "square",
+      "desc": "",
+      "imageUrl": "assets/Logos/the pen studio.png",
+      "thumbnailUrl": "assets/Logos/the pen studio.png"
+    },
+    {
+      "title": "A Maw Pyay Cold Drink",
       "category": "logos",
       "categoryLabel": "Logos",
       "mediaType": "image",
       "thumb": "thumb-2",
       "orientation": "square",
-      "desc": "Logo design for The Pen Studio.",
-      "imageUrl": ""
+      "desc": "",
+      "imageUrl": "assets/Logos/A maw pyay cold drink.png",
+      "thumbnailUrl": "assets/Logos/A maw pyay cold drink.png"
     },
     {
-      "title": "SAYA App Logo",
+      "title": "Autumn Audio",
       "category": "logos",
       "categoryLabel": "Logos",
       "mediaType": "image",
       "thumb": "thumb-3",
       "orientation": "square",
-      "desc": "Logo design for SAYA App.",
-      "imageUrl": ""
+      "desc": "",
+      "imageUrl": "assets/Logos/autumn audio.png",
+      "thumbnailUrl": "assets/Logos/autumn audio.png"
     },
     {
-      "title": "Yes2Ger Logo",
+      "title": "Hnin Pan Eain Clothing",
+      "category": "logos",
+      "categoryLabel": "Logos",
+      "mediaType": "image",
+      "thumb": "thumb-4",
+      "orientation": "square",
+      "desc": "",
+      "imageUrl": "assets/Logos/hnin pan eain clothing.png",
+      "thumbnailUrl": "assets/Logos/hnin pan eain clothing.png"
+    },
+    {
+      "title": "Hotpot Plaza",
+      "category": "logos",
+      "categoryLabel": "Logos",
+      "mediaType": "image",
+      "thumb": "thumb-5",
+      "orientation": "square",
+      "desc": "",
+      "imageUrl": "assets/Logos/hotpot plaza.png",
+      "thumbnailUrl": "assets/Logos/hotpot plaza.png"
+    },
+    {
+      "title": "Isabella Kyaw",
       "category": "logos",
       "categoryLabel": "Logos",
       "mediaType": "image",
       "thumb": "thumb-6",
       "orientation": "square",
-      "desc": "Logo design for Yes2Ger.",
-      "imageUrl": ""
+      "desc": "",
+      "imageUrl": "assets/Logos/isabella kyaw.png",
+      "thumbnailUrl": "assets/Logos/isabella kyaw.png"
+    },
+    {
+      "title": "Mi Htet Ma Food",
+      "category": "logos",
+      "categoryLabel": "Logos",
+      "mediaType": "image",
+      "thumb": "thumb-1",
+      "orientation": "square",
+      "desc": "",
+      "imageUrl": "assets/Logos/mi htet ma food.png",
+      "thumbnailUrl": "assets/Logos/mi htet ma food.png"
+    },
+    {
+      "title": "P3 Fitness Studio",
+      "category": "logos",
+      "categoryLabel": "Logos",
+      "mediaType": "image",
+      "thumb": "thumb-2",
+      "orientation": "square",
+      "desc": "",
+      "imageUrl": "assets/Logos/p3 fitness studio.png",
+      "thumbnailUrl": "assets/Logos/p3 fitness studio.png"
+    },
+    {
+      "title": "Poh Deli Now",
+      "category": "logos",
+      "categoryLabel": "Logos",
+      "mediaType": "image",
+      "thumb": "thumb-3",
+      "orientation": "square",
+      "desc": "",
+      "imageUrl": "assets/Logos/Poh deli now.png",
+      "thumbnailUrl": "assets/Logos/Poh deli now.png"
+    },
+    {
+      "title": "Relife Health and Beauty",
+      "category": "logos",
+      "categoryLabel": "Logos",
+      "mediaType": "image",
+      "thumb": "thumb-4",
+      "orientation": "square",
+      "desc": "",
+      "imageUrl": "assets/Logos/relife health and beauty.png",
+      "thumbnailUrl": "assets/Logos/relife health and beauty.png"
+    },
+    {
+      "title": "Shin Collection",
+      "category": "logos",
+      "categoryLabel": "Logos",
+      "mediaType": "image",
+      "thumb": "thumb-5",
+      "orientation": "square",
+      "desc": "",
+      "imageUrl": "assets/Logos/shin collection.png",
+      "thumbnailUrl": "assets/Logos/shin collection.png"
+    },
+    {
+      "title": "Slake",
+      "category": "logos",
+      "categoryLabel": "Logos",
+      "mediaType": "image",
+      "thumb": "thumb-6",
+      "orientation": "square",
+      "desc": "",
+      "imageUrl": "assets/Logos/slake.png",
+      "thumbnailUrl": "assets/Logos/slake.png"
+    },
+    {
+      "title": "The One Band",
+      "category": "logos",
+      "categoryLabel": "Logos",
+      "mediaType": "image",
+      "thumb": "thumb-1",
+      "orientation": "square",
+      "desc": "",
+      "imageUrl": "assets/Logos/the one band.png",
+      "thumbnailUrl": "assets/Logos/the one band.png"
+    },
+    {
+      "title": "Ywat Thit Food House",
+      "category": "logos",
+      "categoryLabel": "Logos",
+      "mediaType": "image",
+      "thumb": "thumb-2",
+      "orientation": "square",
+      "desc": "",
+      "imageUrl": "assets/Logos/ywat thit food house.png",
+      "thumbnailUrl": "assets/Logos/ywat thit food house.png"
     },
     {
       "title": "SAYA Mascot",

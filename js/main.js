@@ -246,7 +246,8 @@ function openLightbox(index) {
     ? `<div class="lightbox-arrow prev">&lsaquo;</div><div class="lightbox-arrow next">&rsaquo;</div>`
     : '';
 
-  theaterStage.className = `theater-stage ${displayImage ? '' : p.thumb}`;
+  const frameClass = p.category === 'logos' ? 'logo-frame' : '';
+  theaterStage.className = `theater-stage ${displayImage ? frameClass : p.thumb}`;
   theaterStage.innerHTML = mediaHtml + arrows;
 
   setPanelShape(p.orientation);
